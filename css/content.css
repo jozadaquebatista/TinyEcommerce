@@ -1,3 +1,5 @@
 article {
-    background: #333;
+    background: linear-gradient(#eee 70%, rgba(170, 221, 255, 0.2));
+    flex-grow: 5;
+    height: 61.2vh;
 }

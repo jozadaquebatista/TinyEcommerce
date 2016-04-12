@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br" ng-app>
+<html lang="pt-br" ng-app="myApp">
     <head>
         <meta charset="utf-8" />
         <title>TinyEcommerce</title>
         <link rel="shortcut icon" href="res/images/cart.ico" />
         <link rel="stylesheet" type="text/css" href="css/app.css" />
         <link rel="stylesheet" type="text/css" href="css/menubar.css" />
+        <link rel="stylesheet" type="text/css" href="css/content.css" />
+        <link rel="stylesheet" type="text/css" href="css/footer.css" />
     </head>
-    <body>
+    <body ng-controller="dataHandleCtrl">
         <header>
             <nav ng-include="'partials/menubar.html'"></nav>
         </header>
@@ -15,7 +17,30 @@
             <article ng-include="'partials/content.html'"></article>
         </section>
         <footer ng-include="'partials/footer.html'"></footer>
+        <div ng-view></div>
         <script rel="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
         <script rel="javascript" type="text/javascript" src="https://code.angularjs.org/1.5.3/angular-route.min.js"></script>
+        <script rel="javascript" type="text/javascript">
+
+        var myApp = angular.module('myApp', ['ngRoute']);
+
+
+        myApp.controller('dataHandleCtrl', $scope=>{
+
+            $scope.produtos = [
+               {name: 'produto1', 'id': '123'},
+               {name: 'produto2', 'id': '321'},
+               {name: 'produto3', 'id': '312'}
+            ];
+        });
+
+        myApp.config(function($routeProvider){
+            $routeProvider
+            .when('#/produtos', {
+                templateUrl: 'views/order.html',
+                controller: 'dataHandleCtrl'
+            })
+        });
+        </script>
     </body>
 </html>

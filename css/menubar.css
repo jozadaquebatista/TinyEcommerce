@@ -1,6 +1,35 @@
 nav {
-    color:
-    background: #ccc;
+    background: linear-gradient(#eee 95%, #ccc);
+
     display: flex;
     justify-content: flex-end;
+    flex-grow: 2;
+    text-align: center;
+    height: 140px; /*Fixed header*/
+
+    border-bottom: 1px solid #ccc;
+}
+
+img {
+    outline: 1px solid #888;
+    box-shadow: 0 5px 20px #eee;
+}
+
+ul {
+    margin-right: 2em;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+    transition: color .6s ease-in-out;
+}
+
+a:hover {
+    color: #666;
 }

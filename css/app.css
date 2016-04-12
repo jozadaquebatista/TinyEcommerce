@@ -6,8 +6,19 @@ body {
     margin: 0;
     padding: 0;
     border: none;
+    box-sizing: border-box;
     background: #eee;
+
+    display: flex;
+    flex-direction: column;
 }
 
+a:active, a:hover, a:focus, input, input:hover, input:active, input:focus {
+    outline: none;
+}
+/* RESET CSS END*/
+
 body {
+    font-family: Source Sans Pro;
+    font-size: 25px;
 }

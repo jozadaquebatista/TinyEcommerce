@@ -1,5 +1,4 @@
 # TinyEcommerce
-
 <img src="http://placehold.it/1024x400/eeeeee/000000?text=Questions" />
 
 # What it uses?
@@ -20,4 +19,3 @@
     <li>Will be added...</li>
   </ul>
 </ol>
-
