@@ -11,7 +11,7 @@
   <li>AngularJS</li>
   <ul>
     <h3>Why AngularJS?</h3>
-    AngularJS is a javascript framework that extends HTML static boring features, it gives you a awesome set of services, and modules, and allow you to cronstruct your own modules and services to construct great webapps.
+    AngularJS is a javascript framework that extends HTML static and very boring features, it gives you a awesome set of services, and modules, and allow you to construct your own modules and services to construct great dynamic webapps.
   </ul>
   <li>GRUNT</li>
   <ul>
