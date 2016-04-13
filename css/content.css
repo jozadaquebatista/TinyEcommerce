@@ -1,5 +1,37 @@
 article {
-    background: linear-gradient(#eee 70%, rgba(170, 221, 255, 0.2));
-    flex-grow: 5;
-    height: 61.2vh;
+    background: #eee;
+    height: 80vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-top: 2.5em;
+}
+
+.product{
+    outline: 1px solid rgba(150,150,150,0.2);
+    padding: 2px;
+    background: #fff;
+    background: url(http://static.wmobjects.com.br/imgres/arquivos/ids/5651322-344-344/smartphone-lg-g4-beat-dourado-dual-chip-android-5-1-lollipop-4g-octa-core-1-5-ghz-tela-5-2-.jpg) center no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    width: 190px;
+    height: 280px;
+    margin: 0 0.3em;
+    border-radius: 1%;
+    box-shadow: 0 0 0.5em #dee;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    transition: opacity .6s ease-out, filter 1s ease-in-out;
+    z-index: 0;
+}
+
+.product:hover {
+    opacity: .8;
+    filter: contrast(120%);
 }

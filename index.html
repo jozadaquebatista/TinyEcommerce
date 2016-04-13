@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <title>TinyEcommerce</title>
         <link rel="shortcut icon" href="res/images/cart.ico" />
+        <link rel="stylesheet" type="text/css" href="css/uiStyle.css" />
         <link rel="stylesheet" type="text/css" href="css/app.css" />
         <link rel="stylesheet" type="text/css" href="css/menubar.css" />
         <link rel="stylesheet" type="text/css" href="css/content.css" />
@@ -13,33 +14,49 @@
         <header>
             <nav ng-include="'partials/menubar.html'"></nav>
         </header>
+        <ng-view></ng-view>
         <section>
-            <article ng-include="'partials/content.html'"></article>
         </section>
         <footer ng-include="'partials/footer.html'"></footer>
-        <div ng-view></div>
         <script rel="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
         <script rel="javascript" type="text/javascript" src="https://code.angularjs.org/1.5.3/angular-route.min.js"></script>
         <script rel="javascript" type="text/javascript">
 
         var myApp = angular.module('myApp', ['ngRoute']);
 
+        myApp.controller('dataHandleCtrl', function($scope){
 
-        myApp.controller('dataHandleCtrl', $scope=>{
+            $scope.epicImage = 'https://i.ytimg.com/vi/930PmOr-cYk/hqdefault.jpg';
 
             $scope.produtos = [
-               {name: 'produto1', 'id': '123'},
-               {name: 'produto2', 'id': '321'},
-               {name: 'produto3', 'id': '312'}
+               {name: 'produto1', 'id': '1', setID: function(newId){this.id=newId}},
+               {name: 'produto2', 'id': '2', setID: function(newId){this.id=newId}},
+               {name: 'produto3', 'id': '3', setID: function(newId){this.id=newId}},
+               {name: 'produto4', 'id': '4', setID: function(newId){this.id=newId}},
+               {name: 'produto5', 'id': '5', setID: function(newId){this.id=newId}},
+               {name: 'produto6', 'id': '6', setID: function(newId){this.id=newId}},
+               {name: 'produto7', 'id': '7', setID: function(newId){this.id=newId}},
+               {name: 'produto8', 'id': '8', setID: function(newId){this.id=newId}}
             ];
         });
 
         myApp.config(function($routeProvider){
             $routeProvider
-            .when('#/produtos', {
+            .when('/produtos', {
+                templateUrl: 'views/product.html',
+                controller: 'dataHandleCtrl'
+            })
+            .when('/pedidos', {
                 templateUrl: 'views/order.html',
                 controller: 'dataHandleCtrl'
             })
+            .when('/perfil', {
+                templateUrl: 'views/profile.html',
+                controller: 'dataHandleCtrl'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
         });
         </script>
     </body>

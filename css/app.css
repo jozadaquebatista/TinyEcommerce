@@ -7,18 +7,22 @@ body {
     padding: 0;
     border: none;
     box-sizing: border-box;
-    background: #eee;
-
+    background: #ddd;
     display: flex;
     flex-direction: column;
 }
 
 a:active, a:hover, a:focus, input, input:hover, input:active, input:focus {
     outline: none;
+    border: none;
 }
 /* RESET CSS END*/
 
 body {
     font-family: Source Sans Pro;
-    font-size: 25px;
+    font-size: 20px;
+}
+
+body > *:not(header) {
+    padding: 0 180px;
 }
