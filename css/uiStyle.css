@@ -28,6 +28,6 @@ input[type='search'], input[type='text'] {
 
     margin: 15px 0;
 
-    border: 1px solid deepskyblue;
+    border: 1px solid #ddd;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.1), 0 0 2px rgba(0,0,0,0.2);
 }

@@ -4,20 +4,19 @@
         <meta charset="utf-8" />
         <title>TinyEcommerce</title>
         <link rel="shortcut icon" href="res/images/cart.ico" />
-        <link rel="stylesheet" type="text/css" href="css/uiStyle.css" />
-        <link rel="stylesheet" type="text/css" href="css/app.css" />
+        <!--<link rel="stylesheet" type="text/css" href="css/uiStyle.css" />-->
+        <link rel="stylesheet" type="text/css" href="css/stilo.css" />
+        <!--<link rel="stylesheet" type="text/css" href="css/app.css" />-->
         <link rel="stylesheet" type="text/css" href="css/menubar.css" />
         <link rel="stylesheet" type="text/css" href="css/content.css" />
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
     </head>
-    <body ng-controller="dataHandleCtrl">
+    <body>
         <header>
             <nav ng-include="'partials/menubar.html'"></nav>
         </header>
-        <ng-view></ng-view>
-        <section>
-        </section>
-        <footer ng-include="'partials/footer.html'"></footer>
+        <section ng-view></section>
+        <footer ng-include="'partials/footer.html'" style="width: 100%"></footer>
         <script rel="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
         <script rel="javascript" type="text/javascript" src="https://code.angularjs.org/1.5.3/angular-route.min.js"></script>
         <script rel="javascript" type="text/javascript">
@@ -26,7 +25,7 @@
 
         myApp.controller('dataHandleCtrl', function($scope){
 
-            $scope.epicImage = 'https://i.ytimg.com/vi/930PmOr-cYk/hqdefault.jpg';
+            $scope.srcImage = 'http://e2ua.com/data/wallpapers/181/WDF_2206740.jpg';
 
             $scope.produtos = [
                {name: 'produto1', 'id': '1', setID: function(newId){this.id=newId}},
@@ -55,7 +54,7 @@
                 controller: 'dataHandleCtrl'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/produtos'
             });
         });
         </script>
