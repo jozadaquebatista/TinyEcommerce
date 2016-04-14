@@ -1,0 +1,12 @@
+.perfil {
+    background: #eee;
+    height: 80vh;
+    width: 800px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-top: 2.5em;
+}

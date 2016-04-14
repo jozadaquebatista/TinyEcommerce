@@ -1,20 +1,66 @@
-article {
+.items {
     background: #eee;
     height: 80vh;
+    width: 825px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
 
     margin-top: 2.5em;
 }
 
+.order {
+    background: #eee;
+    height: 80vh;
+    width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    margin-top: 2.5em;
+    overflow: scroll;
+}
+
+.order li {
+    padding: 8px 13px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    width: 80%;
+    height: 10vh;
+    display: inline-block;
+
+    transition: background .6s ease-in;
+}
+
+.order li:hover {
+    background: #fff;
+}
+
+.profile {
+    background: #eee;
+    flex-grow: 3;
+    width: 800px;
+
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.profile img {
+    height: 100%;
+}
+
 .product{
     outline: 1px solid rgba(150,150,150,0.2);
     padding: 2px;
     background: #fff;
-    background: url(http://static.wmobjects.com.br/imgres/arquivos/ids/5651322-344-344/smartphone-lg-g4-beat-dourado-dual-chip-android-5-1-lollipop-4g-octa-core-1-5-ghz-tela-5-2-.jpg) center no-repeat;
+    background: url(http://lorempixel.com/g/190/280/people/) center no-repeat;
     background-size: 100%;
     display: inline-block;
     width: 190px;
@@ -27,11 +73,11 @@ article {
     justify-content: center;
     align-items: flex-end;
 
-    transition: opacity .6s ease-out, filter 1s ease-in-out;
+    transition: opacity .3s ease-out, filter 1s ease-in-out;
     z-index: 0;
 }
 
 .product:hover {
     opacity: .8;
-    filter: contrast(120%);
+    filter: contrast(120%) sepia(10%);
 }

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br" ng-app="myApp">
+<html lang="pt-br" ng-app="app" ng-init="listaPedidos=[]">
     <head>
         <meta charset="utf-8" />
         <title>TinyEcommerce</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="shortcut icon" href="res/images/cart.ico" />
         <!--<link rel="stylesheet" type="text/css" href="css/uiStyle.css" />-->
         <link rel="stylesheet" type="text/css" href="css/stilo.css" />
@@ -12,51 +13,17 @@
         <link rel="stylesheet" type="text/css" href="css/footer.css" />
     </head>
     <body>
+        <h1><a href="#/produtos">TinyEcommerce</a></h1>
         <header>
             <nav ng-include="'partials/menubar.html'"></nav>
         </header>
         <section ng-view></section>
         <footer ng-include="'partials/footer.html'" style="width: 100%"></footer>
-        <script rel="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-        <script rel="javascript" type="text/javascript" src="https://code.angularjs.org/1.5.3/angular-route.min.js"></script>
-        <script rel="javascript" type="text/javascript">
-
-        var myApp = angular.module('myApp', ['ngRoute']);
-
-        myApp.controller('dataHandleCtrl', function($scope){
-
-            $scope.srcImage = 'http://e2ua.com/data/wallpapers/181/WDF_2206740.jpg';
-
-            $scope.produtos = [
-               {name: 'produto1', 'id': '1', setID: function(newId){this.id=newId}},
-               {name: 'produto2', 'id': '2', setID: function(newId){this.id=newId}},
-               {name: 'produto3', 'id': '3', setID: function(newId){this.id=newId}},
-               {name: 'produto4', 'id': '4', setID: function(newId){this.id=newId}},
-               {name: 'produto5', 'id': '5', setID: function(newId){this.id=newId}},
-               {name: 'produto6', 'id': '6', setID: function(newId){this.id=newId}},
-               {name: 'produto7', 'id': '7', setID: function(newId){this.id=newId}},
-               {name: 'produto8', 'id': '8', setID: function(newId){this.id=newId}}
-            ];
-        });
-
-        myApp.config(function($routeProvider){
-            $routeProvider
-            .when('/produtos', {
-                templateUrl: 'views/product.html',
-                controller: 'dataHandleCtrl'
-            })
-            .when('/pedidos', {
-                templateUrl: 'views/order.html',
-                controller: 'dataHandleCtrl'
-            })
-            .when('/perfil', {
-                templateUrl: 'views/profile.html',
-                controller: 'dataHandleCtrl'
-            })
-            .otherwise({
-                redirectTo: '/produtos'
-            });
-        });
-        </script>
+    <!--SCRIPTS-->
+    <script rel="javascript" type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script rel="javascript" type="application/javascript" src="https://code.angularjs.org/1.5.3/angular-route.min.js"></script>
+    <script rel="javascript" type="application/javascript" src="js/app.js"></script>
+    <script rel="javascript" type="application/javascript" src="js/routes/appRoutes.js"></script>
+    <script rel="javascript" type="application/javascript" src="js/controllers/dataHandleCtrl.js"></script>
     </body>
 </html>

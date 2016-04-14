@@ -1,14 +1,18 @@
-myApp.config(function($routeProvider){
+app.config(function($routeProvider){
     $routeProvider
-    .when('/pedidos', {
-        templateUrl: 'myPageLoad.html',
+    .when('/produtos', {
+        templateUrl: 'views/product.html',
         controller: 'dataHandleCtrl'
     })
-    .when('/profile', {
-        templateUrl: 'views/products.html',
+    .when('/pedidos', {
+        templateUrl: 'views/order.html',
+        controller: 'dataHandleCtrl'
+    })
+    .when('/perfil', {
+        templateUrl: 'views/profile.html',
         controller: 'dataHandleCtrl'
     })
     .otherwise({
-        redirectTo: '/'
+        redirectTo: '/produtos'
     });
 });

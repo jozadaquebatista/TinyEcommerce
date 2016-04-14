@@ -1,20 +1,11 @@
-<!--<!DOCTYPE html>
-<html lang="pt-br" ng-app>
-    <head>
-        <meta charset="utf-8" />
-        <title>TinyEcommerce</title>
-        <link rel="shortcut icon" href="res/images/cart.ico" />
-        <link rel="stylesheet" type="text/css" href="css/app.css" />
-        <link rel="stylesheet" type="text/css" href="css/menubar.css" />
-        <link rel="stylesheet" type="text/css" href="css/content.css" />
-        <link rel="stylesheet" type="text/css" href="css/footer.css" />
-    </head>
-    <body>
-        <h1>Página de pedidos!</h1>
-        <script rel="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
-        <script rel="javascript" type="text/javascript" src="https://code.angularjs.org/1.5.3/angular-route.min.js"></script>
-    </body>
-</html>
--->
-<h1>Página de pedidos</h1>
-<img src="http://vignette1.wikia.nocookie.net/p__/images/e/e2/Majin_buu_by_anjoicaros-d6fa6o8.png/revision/latest?cb=20140121174957&path-prefix=protagonist" width=450 />
+<h1>Seus pedidos:</h1>
+<h1>Total: {{listaPedidos.length}}</h1>
+<article class="order">
+        <ol style="list-style-type: decimal">
+            <li ng-repeat="pedido in listaPedidos">
+                <img ng-src="{{pedido.img}}" />
+                <a>ID: </a><a>{{pedido.getID()}}</a>
+                <a>Produto: </a>{{pedido.name}}
+            </li>
+        </ol>
+</article>
