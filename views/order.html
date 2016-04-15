@@ -1,11 +1,14 @@
-<h1>Seus pedidos:</h1>
-<h1>Total: {{listaPedidos.length}}</h1>
+<h1>seus pedidos:</h1>
+<h1 style="font-size: 200%">Total {{valorTotal() | currency:'R$'}}</h1>
+<input type="button" value="continuar" class="btn" ng-click="envio()" />
 <article class="order">
-        <ol style="list-style-type: decimal">
+        <ol>
             <li ng-repeat="pedido in listaPedidos">
                 <img ng-src="{{pedido.img}}" />
-                <a>ID: </a><a>{{pedido.getID()}}</a>
+                <a>ID: </a>{{pedido.getID()}}
                 <a>Produto: </a>{{pedido.name}}
+                <a>Preço: {{pedido.price | currency:'R$'}}</a>
+                <!--<input type="number" value="1" min="1" max="99" class="number" />-->
             </li>
         </ol>
 </article>

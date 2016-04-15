@@ -8,16 +8,11 @@ nav {
     border-bottom-left-radius: .4em;
 }
 
-/*img {
-    outline: 1px solid #888;
-    box-shadow: 0 5px 20px #eee;
-    display: none;
-}*/
-
 ul {
 }
 
 li {
+    padding: 10px 20px;
     list-style-type: none;
     display: inline;
     margin: 0 15px 0;
